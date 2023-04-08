@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="style.css" />
+<div class="hero">
+
+  <div class="music">
+    <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="leftClick()">
+            Left
+          </button>
+          <button type="button" class="toggle-btn" onclick="rightClick()">
+            Right
+          </button>
+        </div>
+      </div>
+    <!-- <p>Artist: NEFFEX</p> -->
+    <h2 class="custom_above_text">Good Day</h2>
+    <div class="track">
+      <img src="media/play.png" alt="" id="playBtn" />
+      <div id="waveform"></div>
+    </div>
+    <h2 class="custom_below_text">Good Day</h2>
+
+    <div>
+        <h6>Character: <select disabled name="" id=""><option value="" selected>S$$$</option></select></h6>
+      </div>
+  </div>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/wavesurfer.js"></script>
+
+<script>
+  var playBtn = document.getElementById("playBtn");
+
+  var wavesurfer = WaveSurfer.create({
+    container: "#waveform",
+    waveColor: "#ddd",
+    progressColor: "orange",
+    barWidth: 4,
+    responsive: true,
+    height: 65,
+    barRadius: 4,
+  });
+
+  wavesurfer.load("media/Good-Day-Wake-Up-NEFFEX.mp3");
+
+  playBtn.onclick = function () {
+    wavesurfer.playPause();
+
+    if (playBtn.src.includes("play")) {
+      playBtn.src = "media/pause.png";
+    } else {
+      playBtn.src = "media/play.png";
+    }
+  };
+
+  wavesurfer.on("finish", function () {
+    playBtn.src = "media/play.png";
+
+    wavesurfer.stop();
+  });
+</script>
