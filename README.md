@@ -1,8 +1,4 @@
-Here is a clean and professional **README.md** for your Music Playlist WordPress plugin, including the ZIP upload instructions you requested.
-
----
-
-# WordPress Music Playlist Plugin
+ # WordPress Music Playlist Plugin
 
 **A custom plugin that allows you to create music playlists and play them on the frontend of your WordPress site.**
 
