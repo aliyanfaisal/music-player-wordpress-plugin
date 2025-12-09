@@ -1,7 +1,7 @@
 # WordPress Music Playlist Plugin
 
 **A custom plugin that allows you to create music playlists and play them on the frontend of your WordPress site.**
-
+ 
 ---
 
 ## 📌 Overview
